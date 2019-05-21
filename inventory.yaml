@@ -3,7 +3,6 @@
 
 functions:
 
-    # Google Cloud Function
     - name: ports
       description: "Scrapes then displays the apps and ports from: https://raw.githubusercontent.com/ONSdigital/dp/master/PORTS.md"
       url: ""

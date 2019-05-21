@@ -14,23 +14,25 @@ import (
 
 func main() {
 
-	command := flag.String("call", "", "the name of serverless function we want to call.")
+	command := flag.String("call", "", "the name of the rest endpoint we want to call.")
 	flag.Parse()
 
-	funcInventory := inventory.GetInventory()
+	restInventory := inventory.GetInventory()
 
 	if *command == "" {
-		listCommandsThenExit(funcInventory)
+		listCommandsThenExit(restInventory)
 	}
 
 	url := ""
 	parser := ""
+	headersObj := []models.Header{}
 
-	for i := range funcInventory.Functions {
+	for _, restObj := range restInventory.Functions {
 
-		if funcInventory.Functions[i].Name == *command {
-			url = funcInventory.Functions[i].Url
-			parser = funcInventory.Functions[i].Parser
+		if restObj.Name == *command {
+			url = restObj.Url
+			parser = restObj.Parser
+			headersObj = restObj.Headers
 		}
 	}
 
@@ -42,6 +44,15 @@ func main() {
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		panic(err)
+	}
+
+	for _, headerObj := range headersObj {
+		if headerObj.Env == false {
+			req.Header.Set(headerObj.Key, headerObj.Value)
+		} else {
+			val := os.Getenv(headerObj.Key)
+			req.Header.Set(headerObj.Key, val)
+		}
 	}
 
 	client := &http.Client{}

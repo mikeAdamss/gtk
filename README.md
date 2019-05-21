@@ -15,7 +15,7 @@ The endpoints are defined via a user controlled inventory. Each item in the inve
 - its url.
 
 and ..optionally
-- any headers that need to be added to the request, either hard coded or from an environmental variable (note - not implemented yet)
+- any headers that need to be added to the request, either hard coded or from an environmental variable.
 - the chosen parser (if any), to handle the response body returned.
 
 
