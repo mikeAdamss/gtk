@@ -35,7 +35,7 @@ default:
 NOTE - to use the "ports" example you'll need update the url field in the yaml file (I cant put it on github).
 
 
-# Defining an inventory item (i.e adding more serverless functions)
+## Defining a new inventory item
 
 To add a serverless function to the inventory add an entry as per the below to your `inventory.yaml` file.
 
