@@ -1,7 +1,7 @@
 
 # gtk
 
-gtk (good to know) is a simple serverless function controller.
+gtk (good to know) is a simple serverless function http controller.
 
 It's a go wrapper around an user controlled inventory of aws lambda and google cloud functions. The bit that's "good to know" is whether the function succeeded and what was returned.
 
@@ -30,6 +30,7 @@ and ..optionally
 
 default:
 - `gtk`: lists all serverless functions gtk knows about with the description of what they do.
+- `gtk -call=<NAME_OF_FUNCTION>`: call the function in question.
 - `gtk -call=ports`: a simple example, scrapes then prints all services and ports listed in the dp repo.
 
 NOTE - to use the "ports" example you'll need update the url field in the yaml file (I cant put it on github).
