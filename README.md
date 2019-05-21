@@ -31,7 +31,6 @@ and ..optionally
 default:
 - `gtk`: lists all endpoints gtk knows about with the description of what they do.
 - `gtk -call=<NAME-OF_ENDPOINT>`: call the endpoint in question.
-- `gtk -call=ports`: a simple example, scrapes then prints all services and ports listed in the dp repo.
 
 NOTE - to use the "ports" example you'll need update the url field in the yaml file (I cant put it on github).
 
