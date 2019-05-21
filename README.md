@@ -1,10 +1,10 @@
 
-# gdk (good to know)
+# gdk (good to know) - Serverless Function Controller
 
-This is a go wrapper intended for controlling serverless functions. The bit that's "good to know" is whether the function succeeded
-and what was returned - this response gets cleaned up and printed to your terminal, formatted via the specified parser.
+This is a go wrapper intended for controlling serverless functions. The bit that's "good to know" is whether the function succeeded and what was returned - this response gets cleaned up and printed to your terminal, formatted via the specified parser.
 
 ...wut?
+
 Try it, it's fab.
 
 
@@ -18,7 +18,7 @@ The functions are defined via a user controlled inventory. Each item in the inve
 
 and ..optionally
 - any headers that need to be added to the request, either hard coded or from an environmental variable.
-
+** note - not implemented yet)
 
 ## Installation and Setup
 
@@ -61,5 +61,3 @@ The response_parses will be build up over time. The "arrayOfLines" one shows, ex
 unmarashalled into an array of strings, which are then printed to your terminal.
 
 If no response_parser is specified gdk will print the response status code.
-
-** OTHER - All methods are GET and I haven't done the logic for adding headers yet!**
