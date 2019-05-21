@@ -39,7 +39,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	req, err := http.NewRequest("GET", funcInventory.Functions[0].Url, nil)
+	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		panic(err)
 	}
@@ -63,6 +63,8 @@ func main() {
 	switch parser {
 	case models.ArrayOfLines:
 		parsers.ArrayOfLines(bodyBytes)
+	default:
+		fmt.Println(resp.StatusCode)
 	}
 
 }
