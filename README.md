@@ -1,11 +1,7 @@
 
-# gdk (good to know) - Serverless Function Controller
+# gdk - A Simple Serverless Function Controller
 
-This is a go wrapper intended for controlling serverless functions. The bit that's "good to know" is whether the function succeeded and what was returned - this response gets cleaned up and printed to your terminal, formatted via the specified parser.
-
-...wut?
-
-Try it, it's fab.
+Gdk (good to know) is a go wrapper intended for controlling serverless functions. The bit that's "good to know" is whether the function succeeded and what was returned. This wrapper activates a function from a user-controller inventory, reporting success or failure and print the reponse to terminal formatted via the specified parser.
 
 
 ## How it works
@@ -19,6 +15,7 @@ The functions are defined via a user controlled inventory. Each item in the inve
 and ..optionally
 - any headers that need to be added to the request, either hard coded or from an environmental variable.
 ** note - not implemented yet)
+
 
 ## Installation and Setup
 
