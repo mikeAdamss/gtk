@@ -1,7 +1,9 @@
 
-# gdk - A Simple Serverless Function Controller
+# gdk
 
-Gdk (good to know) is a go wrapper intended for controlling serverless functions. The bit that's "good to know" is whether the function succeeded and what was returned. This wrapper activates a function from a user-controller inventory, reporting success or failure and print the reponse to terminal formatted via the specified parser.
+Gdk (good to know) is a simple serverless functon controller.
+
+It's a go wrapper around an user controlled inventory of aws lamads and good cloud functions. The bit that's "good to know" is whether the function succeeded and what was returned. This wrapper activates a function from a user-controller inventory, reporting success or failure and print the reponse to terminal formatted via the specified parser.
 
 
 ## How it works
