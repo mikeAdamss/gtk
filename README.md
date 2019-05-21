@@ -1,7 +1,7 @@
 
 # gtk
 
-gtk (good to know) is a simple serverless functon controller.
+gtk (good to know) is a simple serverless function controller.
 
 It's a go wrapper around an user controlled inventory of aws lambda and good cloud functions. The bit that's "good to know" is whether the function succeeded and what was returned.
 
