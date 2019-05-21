@@ -32,7 +32,7 @@ default:
 - `gtk`: lists all serverless functions gtk knows about with the description of what they do.
 - `gtk -call=ports`: a simple example, scrapes then prints all services and ports listed in the dp repo.
 
-NOTE - to use the "ports" example you'll need update the url (I cant put that on github).
+NOTE - to use the "ports" example you'll need update the url field in the yaml file (I cant put it on github).
 
 
 # Defining an inventory item (i.e adding more serverless functions)
