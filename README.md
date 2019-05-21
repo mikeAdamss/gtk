@@ -1,22 +1,22 @@
 
 # gtk
 
-gtk (good to know) is a simple serverless function http controller.
+gtk (good to know) is a simple http request-response controller intended to allow the convenient control of large numbers (or rarely used) rest based severless functions (though it'll work with any restful GET endpoints).
 
-It's a go wrapper around an user controlled inventory of aws lambda and google cloud functions. The bit that's "good to know" is whether the function succeeded and what was returned.
+It's a go wrapper around an user controlled inventory of endpoints and their identfiers. The parts that're "good to know" is what functions are availible to you, whether a called function succeeded and what was returned in the response.
 
 
 ## How it works
 
-The functions are defined via a user controlled inventory. Each item in the inventory consists of:
+The endpoints are defined via a user controlled inventory. Each item in the inventory consists of:
 
-- a keyword to call the function.
+- a keyword to call the endpoint.
 - a description of what it does and what it returns.
 - its url.
 
 and ..optionally
 - any headers that need to be added to the request, either hard coded or from an environmental variable (note - not implemented yet)
-- the chosen parser (if any), to handle the response body returned from the function.
+- the chosen parser (if any), to handle the response body returned.
 
 
 ## Installation and Setup
@@ -29,8 +29,8 @@ and ..optionally
 ## Example commands
 
 default:
-- `gtk`: lists all serverless functions gtk knows about with the description of what they do.
-- `gtk -call=<NAME_OF_FUNCTION>`: call the function in question.
+- `gtk`: lists all endpoints gtk knows about with the description of what they do.
+- `gtk -call=<NAME-OF_ENDPOINT>`: call the endpoint in question.
 - `gtk -call=ports`: a simple example, scrapes then prints all services and ports listed in the dp repo.
 
 NOTE - to use the "ports" example you'll need update the url field in the yaml file (I cant put it on github).
@@ -38,7 +38,7 @@ NOTE - to use the "ports" example you'll need update the url field in the yaml f
 
 ## Defining a new inventory item
 
-To add a serverless function to the inventory add an entry as per the below to your `inventory.yaml` file.
+To add an endpoint to to the inventory add an entry as per the below to your `inventory.yaml` file.
 
 ```yaml
 functions:
