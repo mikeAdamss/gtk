@@ -32,12 +32,14 @@ default:
 - `gtk`: lists all serverless functions gtk knows about with the description of what they do.
 
 inventory defined:
-- `gtk -call=ports`: a simple example function I've included. Scrapes then prints all services and ports listed in the dp repo.
+- `gtk -call=ports`: a simple example, scrapes then prints all services and ports listed in the dp repo.
+
+NOTE - to use the "ports" example you'll need update the url (I cant put that on github).
 
 
 # Defining an inventory item (i.e adding more serverless functions)
 
-Create the serverless function, add an entry as per the below example to your inventory.yaml file.
+To add a serverless function to the inventory add an entry as per the below to your `inventory.yaml` file.
 
 ```yaml
 functions:
@@ -56,7 +58,6 @@ functions:
       response_parser: "arrayOfLines"
 ```
 
-The response_parses will be build up over time. The "arrayOfLines" one shows, expects to be returned a response body that can be
-unmarashalled into an array of strings, which are then printed to your terminal.
+The response_parses will be build up over time as needed. The "arrayOfLines" one shown expects to be returned a response body that can be unmarashalled into an array of strings, these strings are then printed to the terminal in order.
 
-If no response_parser is specified gdk will print the response status code.
+If no `response_parser` is specified gdk will print the response status code.
