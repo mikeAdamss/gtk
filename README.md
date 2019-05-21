@@ -16,6 +16,7 @@ The functions are defined via a user controlled inventory. Each item in the inve
 
 and ..optionally
 - any headers that need to be added to the request, either hard coded or from an environmental variable (note - not implemented yet)
+- the chosen parser (if any), to handle the response body returned from the function.
 
 
 ## Installation and Setup
