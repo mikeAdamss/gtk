@@ -1,7 +1,7 @@
 
 # gtk
 
-gtk (good to know) is a simple http request-response controller intended to allow the convenient control of large numbers (or rarely used) rest based severless functions (though it'll work with any restful GET endpoints).
+gtk (good to know) is a simple http request-response controller intended to allow the convenient control of large numbers (or rarely used) rest based severless functions.
 
 It's a go wrapper around an user controlled inventory of endpoints, their descriptions and their identifers. The parts that're "good to know" is what functions are availible to you, whether a called function succeeded and what was returned in the response.
 
