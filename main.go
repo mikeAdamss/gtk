@@ -100,7 +100,7 @@ func listCommandsThenExit(funcInventory models.Functions) {
 		maxTextPad = 8
 	}
 
-	// Display a hacky header
+	// TODO - nice display
 	fmt.Printf("\nFUNCTION" + getPad(8, maxTextPad) + "DESCRIPTION\n")
 	fmt.Printf("----------------------\n")
 

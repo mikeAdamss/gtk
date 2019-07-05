@@ -17,6 +17,7 @@ The endpoints are defined via a user controlled inventory. Each item in the inve
 - its url.
 
 and ..optionally
+- method (if ommitted, it'll be a GET)
 - source repo
 - permissions*
 - any headers that need to be added to the request, either hard coded or from an environmental variable.
@@ -55,17 +56,18 @@ To add an endpoint to to the inventory add an entry as per the below to your `in
 ```yaml
 functions:
 
-    # An example using two request headers, one hard coded, one taken from an environmental variables.
+    # An example using tthree request headers, one hard coded, one taken from an environmental variables, one taken
+    # from the optional json vars file.
     - name: "example"
       description: "This is just the example, a description goes here."
       url: "www.some-variation-of-serveless-function-url.com/probably-google-or-aws/example"
       headers:
-         - key: "foo-key"
+         - key: "do key"
            value: "foo"
-           env: false
-         - name: "baa_key"
-           value: "BAA_KEY"
-           env: true
+         - name: "ray key"
+           key: "BAA_KEY_NAME"
+         - name: "me key"
+           json_key: "ME_KEY_NAME"
       response_parser: "arrayOfLines"
 ```
 
