@@ -29,7 +29,7 @@ and ..optionally
 ## Installation and Setup
 
 - Clone this repo.
-- Set the env variable `GTK_INVENTORY` pointing to the included `inventory.yml`.
+- Set the env variable `GTK_INVENTORY` pointing to the included `inventory.yml` (you can move it).
 - (Optionally, but advised) Set the env variable `GTK_SECRET_KEY` to your chosen secret key (minimum 20 characers).
 - (Optionally) set the env variable `GTK_VARS` to use a local file of variables, where using environmental variables for sending to your functions would otherwise be inconvenient/impractical.
 - Navigate to the cloned repo and `go install`.
@@ -56,7 +56,7 @@ To add an endpoint to to the inventory add an entry as per the below to your `in
 ```yaml
 functions:
 
-    # An example using tthree request headers, one hard coded, one taken from an environmental variables, one taken
+    # An example using three request headers, one hard coded, one taken from an environmental variables, one taken
     # from the optional json vars file.
     - name: "example"
       description: "This is just the example, a description goes here."
