@@ -5,7 +5,7 @@ gtk (good to know) is a simple http request-response controller intended to allo
 
 It's a go wrapper around an user controlled inventory of endpoints, their descriptions and their identifers. The parts that're "good to know" is what functions are availible to you, whether a called function succeeded and what was returned in the response.
 
-gtk implements assumes you'll require authentication methods and supports sha-1 http request authentication (though you can turn it off if you're feeling brave/don't care who triggers your serverless resources).
+gtk assumes you'll require authentication methods and supports sha-1 http request authentication (though you can turn it off if you're feeling brave/don't care who triggers your serverless resources).
 
 
 ## How it works
