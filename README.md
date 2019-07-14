@@ -34,12 +34,6 @@ and ..optionally
 - (Optionally) set the env variable `GTK_VARS` to use a local file of variables, where using environmental variables for sending to your functions would otherwise be inconvenient/impractical.
 - Navigate to the cloned repo and `go install`.
 
-## Authentication
-
-A hash created from your `GTK_SECRET_KEY` will be included in all outgoing requests. If no key has been provided you'll need to provide the additional flag `-na` (no authentication) from the command line.
-
-Note - you'll still need to include server side authentication in your cloud functions. For python users there's a lightweight wrapper that provides this ...here.
-
 ## Example commands
 
 default:
