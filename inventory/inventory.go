@@ -2,17 +2,18 @@ package inventory
 
 import (
 	"fmt"
-	"github.com/mikeAdamss/gtk/models"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"log"
 	"os"
+
+	"github.com/mikeAdamss/gtk/models"
+	"gopkg.in/yaml.v2"
 )
 
 func GetInventory() models.Functions {
 	iPath := os.Getenv("GTK_INVENTORY")
 	if iPath == "" {
-		log.Println("Aborting - no inventory was found at:" + iPath)
+		log.Println("Aborting - no inventory was found. Have you set the environment variable GTK_INVENTORY? This should point to your inventory file." + iPath)
 		os.Exit(1)
 	}
 
