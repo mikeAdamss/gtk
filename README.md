@@ -22,7 +22,7 @@ and ..optionally
 ## Installation and Setup
 
 - Clone this repo.
-- Set the env variable `GTK_INVENTORY` pointing to the included `inventory.yml` (you shoulr probably move it).
+- Set the env variable `GTK_INVENTORY` pointing to the included `inventory.yml` (you should probably move it).
 - Navigate to the cloned repo and `go install`.
 
 ## Authentication
