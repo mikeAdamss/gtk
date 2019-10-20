@@ -3,7 +3,7 @@
 
 gtk (good to know) is a simple http request-response controller intended to allow the convenient control of large numbers (or rarely used) google cloud functions.
 
-It's a go wrapper around an user controlled inventory of endpoints, their descriptions and their identifers. The parts that're "good to know" is what functions are availible to you, whether a called function succeeded and what was returned in the response.
+It's a go wrapper around an user controlled inventory of endpoints, with descriptions and convenient flags to call them.
 
 ## How it works
 
